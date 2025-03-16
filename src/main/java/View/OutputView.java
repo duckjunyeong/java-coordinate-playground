@@ -5,9 +5,23 @@ public class OutputView {
   private static final int MIN_COORD = 0;
 
   public void printGrid() {
-    printCol();
-    printSpace();
+    for (int row = MAX_COORD; row >= 0; row--){
+      printColStart(row);
+      for (int col = 0; col < MAX_COORD; col++) {
+        System.out.print(" # ");
+      }
+      System.out.println();
+    }
     printRow();
+
+  }
+
+  private void printColStart(int row) {
+    if (row % 2 == 0){
+      System.out.printf("%2d  |", row);
+      return;
+    }
+    System.out.print("    |");
   }
 
   private void printCol(){
@@ -23,8 +37,9 @@ public class OutputView {
   private void printRow(){
     StringBuilder str = new StringBuilder();
     for (int i = 0; i < MAX_COORD; i++){
-      str.append("ㅡ ");
+      str.append("ㅁ ");
     }
+    printSpace();
     System.out.println(str);
     printSpace();
 
@@ -33,7 +48,9 @@ public class OutputView {
         System.out.printf("%2d", i);
         continue;
       }
-      System.out.print("   ");
+      System.out.print("  ");
+      System.out.print(" ");
+
     }
     System.out.println();
   }
