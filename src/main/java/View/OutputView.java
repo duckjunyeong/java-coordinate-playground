@@ -62,4 +62,8 @@ public class OutputView {
   public void printDistance(double distance) {
       System.out.println("Distance: " + distance);
   }
+
+  public void writePoints() {
+      System.out.println("Write Points");
+  }
 }

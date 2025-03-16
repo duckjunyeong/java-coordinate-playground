@@ -18,6 +18,4 @@ public class OutputViewTest {
     double distance = 14.14;
     outputView.printDistance(distance);
   }
-
-
 }

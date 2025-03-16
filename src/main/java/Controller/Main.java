@@ -11,9 +11,17 @@ public class Main {
   private static final OutputView outputView = new OutputView();
 
   public static void main(String[] args){
-    List<String> coordList = inputView.readCoordinate();
-    Points points = new Points(coordList);
-    System.out.print(points.getTwoPointDistance());
+    while(true){
+      try{
+        List<String> coordList = inputView.readCoordinate();
+        Points points = new Points(coordList);
+        outputView.printDistance(points.getTwoPointDistance());
+        break;
+      }
+      catch (Exception e){
+        System.out.println("Please reWrite!!");
+      }
+    }
   }
 
 }

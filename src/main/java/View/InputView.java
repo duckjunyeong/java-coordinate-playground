@@ -9,8 +9,10 @@ import java.util.stream.Collectors;
 
 public class InputView {
   private final Scanner scanner = new Scanner(System.in);
+  private final OutputView outputView = new OutputView();
 
   public List<String> readCoordinate(){
+    outputView.writePoints();
     String userInput = scanner.nextLine();
 
     List<String> splitedUserInput = Arrays.asList(userInput.split("-"));
