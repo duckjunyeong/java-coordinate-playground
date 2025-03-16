@@ -1,26 +1,49 @@
-## [NEXTSTEP 플레이그라운드의 미션 진행 과정](https://github.com/next-step/nextstep-docs/blob/master/playground/README.md)
+< 요구 상황 >
+1. X, Y는 24까지만 입력 -> 입력이 틀렸다면 에러메시지, 다시 받기
+2. 입력이 정상적인 경우는 해당 좌표에 특수문자를 표시한다. 
+3. 2개의 입력일 경우 두 좌표값 사이의 거리를 출력한다. 
 
----
-## 학습 효과를 높이기 위해 추천하는 미션 진행 방법
 
----
-1. 피드백 강의 전까지 미션 진행 
-> 피드백 강의 전까지 혼자 힘으로 미션 진행. 미션을 진행하면서 하나의 작업이 끝날 때 마다 add, commit
-> 예를 들어 다음 숫자 야구 게임의 경우 0, 1, 2단계까지 구현을 완료한 후 push
+< 구현 과정 >
+1. 좌표 출력해보기 
+    - 세로줄은 24부터 시작해서 0까지 반복문을 도는데 2씩 줄여가면서
+      출력하기 0이 되었을 때는 +문자 출력 
+    - "24  |\n"
+    - "    |\n"
+    - "22  |\n"
+    - "    |\n"
+    - "20  |\n"
+    - "    |\n"
+    - 가로줄은 세로줄의 출력이 끝난 그 줄에서 '-'문자를 24개 곱해서
+      출력해버리기 그런 다음 새로운 줄을 만들어서 0부터 24까지 반복문을 
+      도는데 2씩 증가시키면서 출력한다
 
-![mission baseball](https://raw.githubusercontent.com/next-step/nextstep-docs/master/playground/images/mission_baseball.png)
 
----
-2. 피드백 앞 단계까지 미션 구현을 완료한 후 피드백 강의를 학습한다.
+2. 좌표를 입력받는다.
+    - 입력값을 파싱하여 x,y 좌표를 뽑아낸다.
+        - '-'를 기준으로 split한다.
+        - 그 문자열배열을 반복문 돌면서 첫 번째 문자 == '(' 
+          마지막 문자 == ')'라면 subString을 통해 괄호를 벗겨낸다. 문자열을 Position클래스 생성자에 넣어 호출한다. 
+        - Position 생성자는 들어온 문자열에 대해서 숫자범위가 유효한지 체크한다.
+            - 해당 문자열을 ',' 을 기준으로 split 한다. 
+            - 해당 문자(숫자)들이 0보다 크고 24보다 작은지 체크한다.
+            - 좌표값이 0보다 작거나 24보다 크다면 에러문구를 출력하고
+              다시 입력받는다. 
 
----
-3. Git 브랜치를 master 또는 main으로 변경한 후 피드백을 반영하기 위한 새로운 브랜치를 생성한 후 처음부터 다시 미션 구현을 도전한다.
 
-```
-git branch -a // 모든 로컬 브랜치 확인
-git checkout master // 기본 브랜치가 master인 경우
-git checkout main // 기본 브랜치가 main인 경우
+< TDD 과정 > 
+1. "(10,10)"와 같은 문자열이 입력되었을 때 검증한 후 객체를 생성해내는지 확인한다. 반대로 0보다 작거나 24보다 큰 문자열을 넣었을 때 오류 메시지를 띄우는지 확인한다. 
+2. CoordCalcualtor에 두 Coordinate 값을 넣었을 때 올바른 값을 도출해내는지 확인한다. 
+3. 
+---------------------------------------------
+< class 설계 >
 
-git checkout -b 브랜치이름
-ex) git checkout -b apply-feedback
-```
+class Coordinate
+    - 멤버 변수
+        - int x, int y
+
+
+
+class CoordCalcualtor
+    - 멤버 함수
+        - public static double getDistance(Coordinate coord1, Coordinate coord2)
