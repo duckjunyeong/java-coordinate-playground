@@ -58,4 +58,8 @@ public class OutputView {
   private void printSpace(){
     System.out.print("     ");
   }
+
+  public void printDistance(double distance) {
+      System.out.println("Distance: " + distance);
+  }
 }
