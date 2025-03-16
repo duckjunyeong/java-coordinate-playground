@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class CoordValidator {
 
-  public static List<Integer> isValidStr(String coordStr) {
+  public static List<Integer> isValidCoordStr(String coordStr) {
     List<String> splitedCoordStr = Arrays.asList(coordStr.split(","));
     List<Integer> coordVerifed = splitedCoordStr.stream()
         .map(CoordValidator::isValidNumRange)

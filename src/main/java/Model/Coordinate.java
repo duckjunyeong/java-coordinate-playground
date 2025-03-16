@@ -11,7 +11,7 @@ public class Coordinate {
   private int y;
 
   public Coordinate(String coordStr){
-    List<Integer> coordList = CoordValidator.isValidStr(coordStr);
+    List<Integer> coordList = CoordValidator.isValidCoordStr(coordStr);
     x = coordList.get(0);
     y = coordList.get(1);
   }
@@ -19,6 +19,14 @@ public class Coordinate {
   public Coordinate(int x, int y){
     this.x = x;
     this.y = y;
+  }
+
+  public int getX() {
+    return x;
+  }
+
+  public int getY(){
+    return y;
   }
 
   @Override
