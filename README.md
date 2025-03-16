@@ -36,16 +36,33 @@
 2. CoordCalcualtor에 두 Coordinate 값을 넣었을 때 올바른 값을 도출해내는지 확인한다. 
 3. 좌표계가 올바르게 출력되는지 확인한다.
     - 일단 COL출력할 때 싱크가 안 맞는 관계로 넘어가기
+4. 입력받은 값이 올바른 format을 하고 있는지(괄호) 확인한다.
+5. 입력받은 값의 List<String>을 CoordCalcualtor클래스의 생성자에 넣었을 때 올바르게 생성이 되는지 확인한다.
 
 ---------------------------------------------
 < class 설계 >
 
+model
 class Coordinate
     - 멤버 변수
         - int x, int y
 
 
-
+-----------------------------------------------
+utils
 class CoordCalcualtor
     - 멤버 함수
         - public static double getDistance(Coordinate coord1, Coordinate coord2)
+
+
+-----------------------------------------------
+view
+
+class OutputView
+    - 멤버 함수
+        - void printGrid(()
+        - void printDistance()
+
+class InputView
+    - 멤버 함수
+        - String readCoordinate()
