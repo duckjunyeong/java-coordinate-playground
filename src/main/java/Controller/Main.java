@@ -1,6 +1,5 @@
 package Controller;
 
-import Model.Coordinate;
 import View.InputView;
 import View.OutputView;
 

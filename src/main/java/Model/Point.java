@@ -5,18 +5,18 @@ import Validator.CoordValidator;
 import java.util.List;
 import java.util.Objects;
 
-public class Coordinate {
+public class Point {
 
   private int x;
   private int y;
 
-  public Coordinate(String coordStr){
+  public Point(String coordStr){
     List<Integer> coordList = CoordValidator.isValidCoordStr(coordStr);
     x = coordList.get(0);
     y = coordList.get(1);
   }
 
-  public Coordinate(int x, int y){
+  public Point(int x, int y){
     this.x = x;
     this.y = y;
   }
@@ -32,7 +32,7 @@ public class Coordinate {
   @Override
   public boolean equals(Object o) {
     if (o == null || getClass() != o.getClass()) return false;
-    Coordinate that = (Coordinate) o;
+    Point that = (Point) o;
     return x == that.x && y == that.y;
   }
 
