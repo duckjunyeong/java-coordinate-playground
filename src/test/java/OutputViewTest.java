@@ -1,6 +1,10 @@
+import Model.Point;
 import View.OutputView;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class OutputViewTest {
 
@@ -9,7 +13,8 @@ public class OutputViewTest {
   @Test
   @DisplayName("좌표계가 올바르게 출력되는지 확인한다.")
   void printGrid_Test(){
-    outputView.printGrid();
+    List<Point> points = Arrays.asList(new Point(3,3), new Point(10,10));
+    outputView.printGrid(points);
   }
 
   @Test
