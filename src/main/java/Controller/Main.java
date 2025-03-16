@@ -13,7 +13,7 @@ public class Main {
   public static void main(String[] args){
     List<String> coordList = inputView.readCoordinate();
     Points points = new Points(coordList);
-
+    System.out.print(points.getTwoPointDistance());
   }
 
 }
