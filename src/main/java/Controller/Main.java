@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Points;
 import View.InputView;
 import View.OutputView;
 
@@ -11,6 +12,7 @@ public class Main {
 
   public static void main(String[] args){
     List<String> coordList = inputView.readCoordinate();
+    Points points = new Points(coordList);
 
   }
 

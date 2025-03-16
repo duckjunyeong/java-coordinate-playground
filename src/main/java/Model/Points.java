@@ -1,5 +1,7 @@
 package Model;
 
+import utils.CoordCalcualtor;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,11 +14,11 @@ public class Points {
         .collect(Collectors.toList());
   }
 
-  public List<Point> getPointList(){
-    return pointList;
+  public double getTwoPointDistance(){
+    return CoordCalcualtor.getDistance(pointList);
   }
 
-  public static double getDistance(Point coord1, Point coord2) {
-    return Math.sqrt(Math.pow(coord1.getX() - coord2.getX(), 2) + Math.pow(coord1.getY() - coord2.getY(), 2));
+  public List<Point> getPointList(){
+    return pointList;
   }
 }
