@@ -15,6 +15,7 @@ public class Main {
       try{
         List<String> coordList = inputView.readCoordinate();
         Points points = new Points(coordList);
+        outputView.printGrid(points.getPointList());
         outputView.printDistance(points.getTwoPointDistance());
         break;
       }

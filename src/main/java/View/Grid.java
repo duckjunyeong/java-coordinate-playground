@@ -66,8 +66,8 @@ public class Grid {
   }
 
   private void printPoints(int row, List<Point> points ){
-    for (int col = 0; col < MAX_COORD; col++) {
-      Point curPoint = new Point(row, col);
+    for (int col = 0; col <= MAX_COORD; col++) {
+      Point curPoint = new Point(col, row);
       if (points.contains(curPoint)){
         printPoint();
         continue;
