@@ -5,7 +5,7 @@ import Validator.CoordValidator;
 import java.util.List;
 import java.util.Objects;
 
-public class Point {
+public class Point implements Comparable<Point> {
 
   private int x;
   private int y;
@@ -27,6 +27,11 @@ public class Point {
 
   public int getY(){
     return y;
+  }
+
+  @Override
+  public int compareTo(Point other){
+    return Integer.compare(this.x, other.x);
   }
 
   @Override
