@@ -34,4 +34,11 @@ public class PointsTest {
       points.calcuRectangleExtent();
     });
   }
+
+  @Test
+  @DisplayName("pointList에 값이 3개 있을 때 삼각형의 너비를 구하는가")
+  void calcuTriangleExtent_test(){
+    Points points = new Points(Arrays.asList("10,10", "14,15", "20,8"));
+    assertThat(points.calcuTriangleExtent()).isEqualTo(29.0);
+  }
 }

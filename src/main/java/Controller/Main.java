@@ -16,7 +16,15 @@ public class Main {
         List<String> coordList = inputView.readCoordinate();
         Points points = new Points(coordList);
         outputView.printGrid(points.getPointList());
-        outputView.printDistance(points.getTwoPointDistance());
+        if (points.getPointListSize() == 2){
+          outputView.printDistance(points.getTwoPointDistance());
+        }
+        if (points.getPointListSize() == 3){
+          outputView.printRectangleExtent(points.calcuTriangleExtent());
+        }
+        if (points.getPointListSize() == 4){
+          outputView.printRectangleExtent(points.calcuRectangleExtent());
+        }
         break;
       }
       catch (Exception e){

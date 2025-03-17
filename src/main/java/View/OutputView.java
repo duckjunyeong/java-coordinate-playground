@@ -15,6 +15,14 @@ public class OutputView {
       System.out.println("Distance: " + distance);
   }
 
+  public void printTriangleExtent(double extent){
+    System.out.println("Triangle extent: " + extent);
+  }
+
+  public void printRectangleExtent(double extenet){
+    System.out.println("Rectangle extent: " + extenet);
+  }
+
   public void writePoints() {
       System.out.println("Write Points");
   }
