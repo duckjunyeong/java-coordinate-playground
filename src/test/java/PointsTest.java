@@ -21,14 +21,4 @@ public class PointsTest {
     Points points = new Points(Arrays.asList("4,9", "14,19"));
     assertThat(points.getPointList()).isEqualTo(Arrays.asList(coord1, coord2));
   }
-
-  @Test
-  @DisplayName("point자료형이 x를 기준으로 정렬되는가")
-  void sort_by_point_x(){
-    List<Point> list = Arrays.asList(new Point(9,1), new Point(8,2), new Point(7,1));
-    Collections.sort(list);
-    for (Point point: list){
-      System.out.println(point.getX() + ", " + point.getY());
-    }
-  }
 }
