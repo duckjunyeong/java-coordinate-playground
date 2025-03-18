@@ -41,15 +41,6 @@ public class Points {
     return Math.round(extent * 10) / 10.0;
   }
 
-  public double getS(Point pos1, Point pos2, Point pos3){
-    double sum = 0;
-    sum += CoordCalcualtor.getDistance(pos1, pos2);
-    sum += CoordCalcualtor.getDistance(pos1, pos3);
-    sum += CoordCalcualtor.getDistance(pos2, pos3);
-
-    return sum / 2;
-  }
-
   public int calcuRectangleExtent() {
     Collections.sort(pointList);
     Point pos1 = pointList.get(0);
