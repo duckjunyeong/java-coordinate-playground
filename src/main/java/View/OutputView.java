@@ -13,6 +13,7 @@ public class OutputView {
       printNewLine();
     }
     printRowAxis();
+    printNewLine();
   }
 
   private static void printRowAxis() {
@@ -21,9 +22,7 @@ public class OutputView {
       System.out.print("--- ");
     }
     printNewLine();
-
     printRowAxisNumber();
-
   }
 
   private static void printRowAxisNumber() {
@@ -37,12 +36,12 @@ public class OutputView {
     }
   }
 
-  private static void printThreeEmptySpace() {
-    System.out.print("   ");
-  }
-
-  private static void printFourEmptySpace() {
-    System.out.print("    ");
+  private static void printColAxis(int row){
+    if (row % 2 == 0) {
+      System.out.printf("%2d|", row);
+      return;
+    }
+    System.out.print("  |");
   }
 
   private static void printPoints(List<Point> points, int row) {
@@ -60,17 +59,19 @@ public class OutputView {
     printFourEmptySpace();
   }
 
-
-  private static void printColAxis(int row){
-    if (row % 2 == 0) {
-      System.out.printf("%2d|", row);
-      return;
-    }
-    System.out.print("  |");
-  }
-
   private static void printNewLine() {
     System.out.println();
   }
 
+  private static void printThreeEmptySpace() {
+    System.out.print("   ");
+  }
+
+  private static void printFourEmptySpace() {
+    System.out.print("    ");
+  }
+
+  public static void printMessage(String areaInfo) {
+    System.out.println(areaInfo);
+  }
 }

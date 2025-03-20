@@ -11,7 +11,7 @@ public class OutputViewTest {
   @Test
   @DisplayName("특정 좌표의 값이 주어졌을 때 Grid를 올바르게 출력하는가")
   void outputView_printGrid_Test(){
-    List<Point> points = Arrays.asList(new Point(14,12), new Point(5,1));
+    List<Point> points = Arrays.asList(new Point(0,0), new Point(5,1), new Point(24,24));
     OutputView.printGrid(points);
   }
 }
