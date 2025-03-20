@@ -29,7 +29,9 @@
 4. List<Point>가 3일 때 Trangle객체를 생성해본다.
       3-1. Trangle객체의 삼각형을 너비를 구한다.
 
-5. List<Point>가 4일 때 Rectangle객체를 생성해본다. 4개의 좌표들의 x값들을 추출했을 때 중복을 제거한 후 
+5. MathUtils 클래스 roundToPlaces 메서드 테스트 및 리팩토링 진행
+
+6. List<Point>가 4일 때 Rectangle객체를 생성해본다. 4개의 좌표들의 x값들을 추출했을 때 중복을 제거한 후 
    사이즈가 2이어야하고 y값들도 추출한 후 중복을 제거하면 사이즈가 2이어야한다. 
       4-1. Rectangle객체의 사각형의 너비를 구한다.
    
