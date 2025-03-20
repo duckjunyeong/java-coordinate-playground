@@ -40,7 +40,7 @@ controller
 
 
 ### model
-## Class Point
+# Class Point
 
 - **멤버 변수:**
     - `private int x` 
@@ -50,28 +50,28 @@ controller
     - `public int getY()`
     - `public double distance(Point other)`
 
-## Class abstract Shpae
+# Class abstract Shpae
 - **멤버 변수**
     - `private List<Point> points`
 
 - **메서드:**
     - `public abstract double getArea()`
 
-## Class Line extends Shpae
+# Class Line extends Shpae
 
 - **멤버 변수:**
 
 - **메서드:**
     - `public double getArea()`
 
-## Class Triangle extends Shpae
+# Class Triangle extends Shpae
 
 - **멤버 변수:**
 
 - **메서드:**
     - `public double getArea()`
 
-## Class Rectangle extends Shape
+# Class Rectangle extends Shape
 
 - **멤버 변수:**
 - 
