@@ -55,7 +55,6 @@ Class abstract Shpae
 - **메서드:**
     - `public abstract double getArea()`
     - `public List<Point> getPoints()`
-    - `public String getName()`
 
 Class Line extends Shpae
 
