@@ -98,7 +98,13 @@ Class InputView
 
 ### utils
 
-Class StrConvert
+Class StrConvertUtils
 
 - **메서드**
     - `public Point toPointInstance(String point)` 
+
+
+Class MathUtils
+
+- **메서드**
+    - `public doube roundToPlaces(double curNum, int place)`
