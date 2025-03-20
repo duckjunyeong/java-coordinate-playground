@@ -1,5 +1,6 @@
 package Model;
 
+import utils.MathUtils;
 import utils.PointCalcualtor;
 
 import java.util.List;
@@ -23,6 +24,6 @@ public class Triangle extends Shape {
     double s = (a + b + c) / 2;
     double result = Math.sqrt(s * (s - a) * (s - b) * (s - c));
 
-    return Math.round(result * 100) / 100.0;
+    return MathUtils.roundToPlaces(result, 2);
   }
 }
