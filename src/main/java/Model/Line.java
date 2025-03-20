@@ -1,5 +1,7 @@
 package Model;
 
+import utils.PointCalcualtor;
+
 import java.util.List;
 
 public class Line extends Shape{
@@ -10,15 +12,11 @@ public class Line extends Shape{
     super(pointList);
   }
 
-  private void isTwoPoints(List<Point> pointList) {
-    if (pointList.size() != 2){
-      throw new IllegalArgumentException("선을 만들기 위해서는 2개의 좌표가 입력되어야 합니다.");
-    }
-  }
-
   @Override
   public double getArea(){
-    return 1.1;
+    Point pos1 = points.get(0);
+    Point pos2 = points.get(1);
+    return PointCalcualtor.getDistance(pos1, pos2);
   }
 
 }
