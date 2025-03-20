@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class StrConvert {
   private static final String INCORRECT_FORMAT = "올바른 형식으로 입력해주세요.";
 
-  public Point toPointInstance(String strPoint) {
+  public static Point toPointInstance(String strPoint) {
     Pattern pattern = Pattern.compile("\\((\\d+),(\\d+)\\)");
     Matcher matcher = pattern.matcher(strPoint);
 

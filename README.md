@@ -93,6 +93,7 @@ Class InputView
 
 - **메서드**
     - `public List<Point> readPoints`
+    - `public List<Point> translateToPointList`
 
 
 
