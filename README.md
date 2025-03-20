@@ -34,11 +34,6 @@
 
 < class 설계 >
 
-controller
-    - 
-
-
-
 ### model
 Class Point
 
@@ -56,28 +51,51 @@ Class abstract Shpae
 
 - **메서드:**
     - `public abstract double getArea()`
+    - `public List<Point> getPoints()`
+    - `public String getName()`
 
 Class Line extends Shpae
 
 - **멤버 변수:**
-
+    - `private final String name = "Line"`
 - **메서드:**
     - `public double getArea()`
 
 Class Triangle extends Shpae
 
 - **멤버 변수:**
-
+    - `private final String name = "Triangle"`
 - **메서드:**
     - `public double getArea()`
 
 Class Rectangle extends Shape
 
 - **멤버 변수:**
-- 
+    - `private final String name = "Rectangle"`
+
 - **메서드:**
     - `public double getArea()`
     
 
 
-view
+### view
+Class OutputView
+
+- **메서드**
+    - `public void announceWritePoints`
+    - `public void printGrid()`
+    - `public void printArea()`
+
+Class InputView
+
+- **메서드**
+    - `public List<Point> readPoints`
+
+
+
+### utils
+
+Class StrConvert
+
+- **메서드**
+    - `public Point toPointInstance(String point)` 
