@@ -30,3 +30,54 @@
    사이즈가 2이어야하고 y값들도 추출한 후 중복을 제거하면 사이즈가 2이어야한다. 
       4-1. Rectangle객체의 사각형의 너비를 구한다.
    
+
+
+< class 설계 >
+
+controller
+    - 
+
+
+
+### model
+## Class Point
+
+- **멤버 변수:**
+    - `private int x` 
+    - `private int y` 
+- **메서드:**
+    - `public int getX()`
+    - `public int getY()`
+    - `public double distance(Point other)`
+
+## Class abstract Shpae
+- **멤버 변수**
+    - `private List<Point> points`
+
+- **메서드:**
+    - `public abstract double getArea()`
+
+## Class Line extends Shpae
+
+- **멤버 변수:**
+
+- **메서드:**
+    - `public double getArea()`
+
+## Class Triangle extends Shpae
+
+- **멤버 변수:**
+
+- **메서드:**
+    - `public double getArea()`
+
+## Class Rectangle extends Shape
+
+- **멤버 변수:**
+- 
+- **메서드:**
+    - `public double getArea()`
+    
+
+
+view
