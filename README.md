@@ -109,3 +109,61 @@ Class MathUtils
 
 - **메서드**
     - `public doube roundToPlaces(double curNum, int place)`
+
+
+2차구현을 하며..
+- interface와 추상클래스의 차이를 코드를 통해 조금 이해할 수 있게 되었다. 하늘 위를 나는 것들은 나의 고도가 얼마인지, 속도가 얼마인지에 관한 정보를
+가지고 있다. 이런 것을 interface로 묶는 것이다. 추상클래스는 여러 비행기의 종류들을 공통된 특징들을 가지고 있는 부모 클래스를 말할 수 있다. 조금 더 
+좁은 범위로 들어온 느낌이다. 현재로써는 이렇게 이해하였고 앞으로는 추상클래스를 만들고 그 안에서 여러 클래스에서 공통된 메서드를 사용한다면 그것들을 
+모아 하나의 interface로 만들면 관리와 가독성이 더 높아질 것 같다. 더 중요한 것은 interface를 사용하면 변경가능성이 높은 기능들에 대해서 대처하기가
+쉽다는 것이다. 예를 들어
+
+다음과 같은 4종류의 비행기가 존재한다고 가정해보자. 
+
+class A81 
+
+
+class B92
+
+
+class C99
+
+
+class P12
+
+
+나는 이 중 하나의 비행기를 탈 수 있다. 오늘은 A81비행기를 탄다고 하면
+
+A81 plane = new A81(); 
+plane.go() 
+
+
+다음날은 P12를 탄다고 해보자
+
+P12 plane = new P12();
+plane.go()
+
+
+근데 이게 맨날 바뀌면 코드를 어떻게 매번 수정할 수 있겠는가.. interface로 묶으면 좋다.
+
+interface Plane 
+    void go();
+
+class A81 implements Plane
+
+
+class B92 implements Plane
+
+
+class C99 implements Plane
+
+
+class P12 implements Plane
+
+그럼 내가 뭘 타던간에 생성자함수나 매개변수를 통해 의존성을 주입받을 수 있다. 
+
+private Plane plane;
+
+Main(Plane plane){
+    this.plane = plane;
+}

@@ -1,6 +1,5 @@
 package Model;
 
-import java.util.Comparator;
 import java.util.Objects;
 
 public class Point implements Comparable<Point> {
