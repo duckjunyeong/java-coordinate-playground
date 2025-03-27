@@ -124,3 +124,5 @@ class InputView
 6. interface FigureCreator: 도형을 만들 때 사용하는 메서드 관리
 7. class  FigureFactory   : 도형을 생성하는 기능
 8. 모든 상수를 클래스변수로 만들기
+
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/duckjunyeong/java-coordinate-playground?utm_source=oss&utm_medium=github&utm_campaign=duckjunyeong%2Fjava-coordinate-playground&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
